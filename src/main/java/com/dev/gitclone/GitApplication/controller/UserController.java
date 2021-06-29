@@ -76,11 +76,7 @@ public class UserController {
 //	        return Status.SUCCESS;
 //	    }
 	    
-	    @DeleteMapping("/users/delete/{id}")
-	    public Status deleteUserById(Integer id) {
-	    	userRepository.deleteById(id);
-	        return Status.SUCCESS;
-	    }
+	   
 	    
 	    @GetMapping(path="/users/all")
 		 public Iterable<User> getAllUsers() {

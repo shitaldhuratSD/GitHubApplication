@@ -19,8 +19,9 @@ public class User {
 	 private int id;
 	
 	    private  String username;
-	
 	    private  String password;
+	    private  String email;
+	    private  String mobileNum;
 	    private  boolean loggedIn;
 	    public User() {
 	    }
@@ -51,7 +52,20 @@ public class User {
 	    public void setLoggedIn(boolean loggedIn) {
 	        this.loggedIn = loggedIn;
 	    }
-	    @Override
+	    
+	    public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public String getMobileNum() {
+			return mobileNum;
+		}
+		public void setMobileNum(String mobileNum) {
+			this.mobileNum = mobileNum;
+		}
+		@Override
 	    public boolean equals(Object o) {
 	        if (this == o) return true;
 	        if (!(o instanceof User)) return false;
@@ -64,13 +78,10 @@ public class User {
 	        return Objects.hash(id, username, password, 
 	                            loggedIn);
 	    }
-	    @Override
-	    public String toString() {
-	        return "User{" +
-	                "id=" + id +
-	                ", username='" + username + '\'' +
-	                ", password='" + password + '\'' +
-	                ", loggedIn=" + loggedIn +
-	                '}';
-	    }
+		@Override
+		public String toString() {
+			return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email
+					+ ", mobileNum=" + mobileNum + ", loggedIn=" + loggedIn + "]";
+		}
+	   
 	}
